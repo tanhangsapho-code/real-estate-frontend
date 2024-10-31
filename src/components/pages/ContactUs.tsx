@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { Phone, Mail, Home } from "lucide-react";
 import { Card } from "../card/Card";
 import Button from "../button/button";
-import Input from "../input/input";
-import { section } from "framer-motion/client";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -16,12 +14,16 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLSelectElement | HTMLInputElement | HTMLTextAreaElement
+    >
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -40,8 +42,8 @@ const ContactPage = () => {
                 Get in Touch
               </h1>
               <p className="text-xl text-black max-w-2xl mx-auto leading-relaxed">
-                We're here to help you find your dream property. Reach out to
-                our expert team for personalized assistance.
+                We&aposre here to help you find your dream property. Reach out
+                to our expert team for personalized assistance.
               </p>
             </div>
           </div>

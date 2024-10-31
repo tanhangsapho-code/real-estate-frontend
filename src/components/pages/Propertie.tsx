@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Card, CardContent } from "../card/Card";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PropertyShowcase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +45,7 @@ const PropertyShowcase = () => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <section className="py-16 bg-white" id="property">
@@ -84,7 +85,9 @@ const PropertyShowcase = () => {
               >
                 <Card className="h-full w-full relative overflow-hidden group border-0 rounded-lg outline-none shadow-lg">
                   <CardContent className="p-0 h-full relative">
-                    <img
+                    <Image
+                      width={450}
+                      height={500}
                       src={property.image}
                       alt={property.title}
                       className="w-full h-full object-cover transition-transform duration-700  rounded-lg"

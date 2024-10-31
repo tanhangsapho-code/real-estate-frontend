@@ -16,7 +16,7 @@ const AboutUsSection = () => {
               than just bricks and mortar—it’s the start of a new journey.
             </p>
             <p className="text-lg text-gray-700">
-              Whether you're looking to buy, sell, or invest, we provide
+              Whether you&aposre looking to buy, sell, or invest, we provide
               personalized guidance every step of the way. Our team is dedicated
               to matching you with properties that fit your unique vision and
               lifestyle, because we believe everyone deserves a space where they
